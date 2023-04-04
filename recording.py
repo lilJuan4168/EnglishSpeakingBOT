@@ -10,9 +10,9 @@ def record(seconds, outputWAVpath, ouputMP3path):
     except KeyboardInterrupt:
         pass
     print("\nFinished...")
-    write(outputWAVpath+'/output.wav', 44100, myrecording) 
-    sound = AudioSegment.from_wav(outputWAVpath+'/output.wav') 
-    sound.export(ouputMP3path+'/myVoice.mp3', format='mp3')
+    write(outputWAVpath+'/myVoice.wav', 44100, myrecording) #output.wav
+    #sound = AudioSegment.from_wav(outputWAVpath+'/output.wav') 
+    #sound.export(ouputMP3path+'/myVoice.mp3', format='mp3')
     return True
 
 
