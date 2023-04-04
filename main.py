@@ -1,7 +1,7 @@
 from time import sleep
 from pygame import mixer
 import tempfile
-import audioToText, chatGPT, recording, TextToAudio
+import audioToText, chatGPT, recording, textToAudio
 from os import system
 
 chatGPT.openai.api_key = chatGPT.openaiKey
@@ -18,7 +18,7 @@ with tempfile.TemporaryDirectory() as tempdir: #tmp directory to store audio fil
           texto = audioToText.ToText(tempdir)  #voice decode to text
           print(texto)   #show the result of the decode
           answer = chatGPT.chatingGPT(texto) #give the text to gpt
-          TextToAudio.BotTalk(answer, tempdir) #transform the gpt's answer in audio
+          textToAudio.BotTalk(answer, tempdir, 'en') #transform the gpt's answer in audio
 
           mixer.init()
           mixer.music.load(tempdir+'/botaudio.mp3') #plays the audio response

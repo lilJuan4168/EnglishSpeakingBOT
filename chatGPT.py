@@ -3,6 +3,6 @@ import openai
 openaiKey = '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'
 
 def chatingGPT(msg):
-    modelGPT = "text-davinci-003"
-    question = openai.Completion.create(model=modelGPT, max_tokens=200, prompt=msg)
-    return question.choices[0].text
+    modelGPT = "gpt-3.5-turbo"
+    question = openai.ChatCompletion.create(model=modelGPT, max_tokens=100, messages=[{"role": "user", "content": msg}])
+    return question.choices[0].message.content
