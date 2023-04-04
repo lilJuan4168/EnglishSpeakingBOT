@@ -14,7 +14,7 @@ with tempfile.TemporaryDirectory() as tempdir: #tmp directory to store audio fil
           print("Press 'W' to ask and 'CTRL' to stop ")
           userKeyboard = input("your input: ")
           if userKeyboard.upper() == 'W':
-             recording.record(12,tempdir,tempdir) #voice recorder
+             recording.record(10,tempdir,tempdir) #voice recorder
           texto = audioToText.ToText(tempdir)  #voice decode to text
           print(texto)   #show the result of the decode
           answer = chatGPT.chatingGPT(texto) #give the text to gpt
@@ -27,6 +27,7 @@ with tempfile.TemporaryDirectory() as tempdir: #tmp directory to store audio fil
           sleep(1)
           system('clear')
           if userKeyboard2.upper() == 'Y':
+              mixer.music.stop()
               continue
           elif userKeyboard2.upper() == 'N':
               state = False
