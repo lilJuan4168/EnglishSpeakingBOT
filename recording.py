@@ -2,7 +2,7 @@ import sounddevice as sd
 from scipy.io.wavfile import write
 from pydub import AudioSegment 
 
-def record(seconds, outputWAVpath, ouputMP3path):
+def record(seconds, outputWAVpath):
     myrecording = sd.rec(int(seconds * 44100), samplerate=44100, channels=2)
     print("Starting...")
     try:
