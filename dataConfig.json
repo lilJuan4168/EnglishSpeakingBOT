@@ -1,5 +1,5 @@
 {
-    "openaiAPIkey": "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",
+    "openaiAPIkey": "",
     "maxTokens": 150,
     "seconds": 12,
     "modelSet": "base",

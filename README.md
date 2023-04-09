@@ -18,4 +18,4 @@ Install all necessary modules listed below.
 * pip install openai
 * pip install gTTS
 
-Take in account the program is tested in ubuntu-debian distro like. The performance in redhat and archlinux distros are not tested.
+Take in account the program is tested in ubuntu-debian distro like. The performance in other distros are not tested.
